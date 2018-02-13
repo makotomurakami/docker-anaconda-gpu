@@ -1,7 +1,7 @@
 ## 最初に行う処理
 
 ### make and change directory
-`$ mkdir hoge`
+`$ mkdir hoge`  
 `$ cd hoge`
 
 ### git clone
