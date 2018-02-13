@@ -49,16 +49,20 @@ RUN wget https://download.jetbrains.com/python/pycharm-community-2017.3.3.tar.gz
     apt-get install -y libxtst6 fonts-takao
 
 # x window
-ARG uid=1000
-ARG gid=1000
-ARG user=murakami
-ARG group=murakami
+#ARG uid=1000
+#ARG gid=1000
+#ARG user=murakami
+#ARG group=murakami
+ARG uid
+ARG gid
+ARG user
+ARG group
 RUN apt-get update && \
     apt-get install -y sudo && \
     groupadd -g ${gid} ${group} && \
 #    useradd -u ${uid} -g ${gid} -r ${user}
     useradd -u ${uid} -g ${gid} -r ${user} -G sudo && \
-    echo 'murakami:murakami' | chpasswd
+    echo ${user}:${user} | chpasswd
     
-CMD /bin/bash
-#CMD /opt/pycharm-community-2017.3.3/bin/pycharm.sh
+# CMD /bin/bash
+CMD /opt/pycharm-community-2017.3.3/bin/pycharm.sh
