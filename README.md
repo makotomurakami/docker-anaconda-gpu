@@ -4,7 +4,7 @@ anaconda3.6, OpenGL, OpenCVの環境が構築でき，PyCharmを使用した3次
 
 ## 2. システム要件
 - nvidiaのGPUが搭載されている．
-- Docker CEがインストールされている．
+- Dockerがインストールされている．
 - nvidia-docker2がインストールされている．
 
 ## 3. 使い方
