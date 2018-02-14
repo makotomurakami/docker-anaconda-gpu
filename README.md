@@ -1,16 +1,23 @@
-## 最初に行う処理
+## 説明
+東洋大学総合情報学部村上真研究室の演習で使用するDockerコンテナ用のDockerfileとビルド・起動スクリプトファイルです．
+anaconda3.6, OpenGL, OpenCVの環境が構築でき，PyCharmを使用した3次元コンピュータグラフィックスや画像処理の演習ができます．
 
-### make and change directory
-`$ mkdir hoge`  
-`$ cd hoge`
+## システム要件
+nvidiaのGPUが搭載されている．
+Docker CEがインストールされている．
+nvidia-docker2がインストールされている．
 
-### git clone
-`$ git clone https://github.com/makotomurakami/docker-anaconda-gpu.git`
+## 使い方
 
-### build
-`$ ./docker_build_anaconda_gpu.sh`
+### コンテナイメージの作成
+http://makotomurakami.com/blog/2018/02/14/post-131/
 
-## 毎回行う処理
+### PyCharmの使い方
+http://makotomurakami.com/blog/2018/02/14/post-144/
 
-### run
-`$ ./docker_run_anaconda_gpu.sh`
+### OpenGLのサンプルプログラム
+http://makotomurakami.com/blog/2018/02/14/post-144/
+
+### OpenCVのサンプルプログラム
+http://makotomurakami.com/blog/2018/02/14/post-144/
+
