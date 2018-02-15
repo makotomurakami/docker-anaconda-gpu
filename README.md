@@ -20,4 +20,4 @@ http://makotomurakami.com/blog/2018/02/14/post-144/
 
 ### 3.4 OpenCVのサンプルプログラム
 http://makotomurakami.com/blog/2018/02/14/post-144/
-
+aaa
