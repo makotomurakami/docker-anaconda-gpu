@@ -46,7 +46,8 @@ RUN wget https://download.jetbrains.com/python/pycharm-community-2017.3.3.tar.gz
     tar xvfz pycharm-community-2017.3.3.tar.gz --directory /opt && \
     rm pycharm-community-2017.3.3.tar.gz && \
     apt-get update && \
-    apt-get install -y libxtst6 fonts-takao
+    apt-get install -y libxtst6 \
+    	    	       fonts-takao
 
 # x window
 ARG uid
