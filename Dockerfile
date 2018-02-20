@@ -48,6 +48,14 @@ RUN wget https://download.jetbrains.com/python/pycharm-community-2017.3.3.tar.gz
     apt-get update && \
     apt-get install -y libxtst6 \
     	    	       fonts-takao
+# printer
+# RUN wget http://download.brother.com/welcome/dlf101123/brgenml1lpr-3.1.0-1.i386.deb
+#     wget http://download.brother.com/welcome/dlf101125/brgenml1cupswrapper-3.1.0-1.i386.deb
+# RUN dpkg -i --force-all brgenml1lpr-3.1.0-1.i386.deb
+# RUN dpkg -i --force-all brgenml1cupswrapper-3.1.0-1.i386.deb
+# RUN apt-get install -y cups
+# RUN rm brgenml1lpr-3.1.0-1.i386.deb
+#    rm brgenml1cupswrapper-3.1.0-1.i386.deb
 
 # x window
 ARG uid
@@ -61,5 +69,5 @@ RUN apt-get update && \
     useradd -u ${uid} -g ${gid} -r ${user} -G sudo && \
     echo ${user}:${user} | chpasswd
     
-# CMD /bin/bash
-CMD /opt/pycharm-community-2017.3.3/bin/pycharm.sh
+CMD /bin/bash
+# CMD /opt/pycharm-community-2017.3.3/bin/pycharm.sh
