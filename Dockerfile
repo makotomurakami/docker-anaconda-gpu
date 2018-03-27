@@ -16,7 +16,8 @@ RUN apt-get update && \
     apt-get install -y emacs24-nox \
 		       emacs24-el \
 		       emacs-mozc \
-		       emacs-mozc-bin
+		       emacs-mozc-bin \
+      		       xsel
 # anaconda
 RUN apt-get update && \
     apt-get install -y wget \
@@ -69,5 +70,5 @@ RUN apt-get update && \
     useradd -u ${uid} -g ${gid} -r ${user} -G sudo && \
     echo ${user}:${user} | chpasswd
     
-CMD /bin/bash
-# CMD /opt/pycharm-community-2017.3.3/bin/pycharm.sh
+# CMD /bin/bash
+CMD /opt/pycharm-community-2017.3.3/bin/pycharm.sh
