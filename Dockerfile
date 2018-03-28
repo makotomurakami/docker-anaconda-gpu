@@ -17,7 +17,7 @@ RUN apt-get update && \
 		       emacs24-el \
 		       emacs-mozc \
 		       emacs-mozc-bin \
-      		       xsel
+      		       xclip
 # anaconda
 RUN apt-get update && \
     apt-get install -y wget \
@@ -27,9 +27,9 @@ RUN apt-get update && \
 		       libsm6 \
 		       libxrender1 \
        		       libgl1-mesa-dev && \
-    wget http://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh && \
-    bash Anaconda3-5.0.1-Linux-x86_64.sh -b -p /usr/local/bin/anaconda3 && \
-    rm Anaconda3-5.0.1-Linux-x86_64.sh
+    wget http://repo.continuum.io/archive/Anaconda3-5.1.0-Linux-x86_64.sh && \
+    bash Anaconda3-5.1.0-Linux-x86_64.sh -b -p /usr/local/bin/anaconda3 && \
+    rm Anaconda3-5.1.0-Linux-x86_64.sh
 
 ENV PATH $PATH:/usr/local/bin/anaconda3/bin
 
@@ -37,15 +37,16 @@ ENV PATH $PATH:/usr/local/bin/anaconda3/bin
 RUN apt-get update && \
     apt-get install -y freeglut3-dev \
  		       gcc && \
+    /usr/local/bin/anaconda3/bin/pip install --upgrade pip && \		       
     /usr/local/bin/anaconda3/bin/pip install PyOpenGL \
     				     	     PyOpenGL_accelerate \
 					     opencv-python
 ENV QT_X11_NO_MITSHM 1
 
 # pycharm
-RUN wget https://download.jetbrains.com/python/pycharm-community-2017.3.3.tar.gz && \
-    tar xvfz pycharm-community-2017.3.3.tar.gz --directory /opt && \
-    rm pycharm-community-2017.3.3.tar.gz && \
+RUN wget https://download.jetbrains.com/python/pycharm-community-2017.3.4.tar.gz && \
+    tar xvfz pycharm-community-2017.3.4.tar.gz --directory /opt && \
+    rm pycharm-community-2017.3.4.tar.gz && \
     apt-get update && \
     apt-get install -y libxtst6 \
     	    	       fonts-takao
@@ -71,4 +72,4 @@ RUN apt-get update && \
     echo ${user}:${user} | chpasswd
     
 # CMD /bin/bash
-CMD /opt/pycharm-community-2017.3.3/bin/pycharm.sh
+CMD /opt/pycharm-community-2017.3.4/bin/pycharm.sh
