@@ -44,9 +44,9 @@ RUN apt-get update && \
 ENV QT_X11_NO_MITSHM 1
 
 # pycharm
-RUN wget https://download.jetbrains.com/python/pycharm-community-2017.3.4.tar.gz && \
-    tar xvfz pycharm-community-2017.3.4.tar.gz --directory /opt && \
-    rm pycharm-community-2017.3.4.tar.gz && \
+RUN wget https://download.jetbrains.com/python/pycharm-community-2018.1.tar.gz && \
+    tar xvfz pycharm-community-2018.1.tar.gz --directory /opt && \
+    rm pycharm-community-2018.1.tar.gz && \
     apt-get update && \
     apt-get install -y libxtst6 \
     	    	       fonts-takao
@@ -72,4 +72,4 @@ RUN apt-get update && \
     echo ${user}:${user} | chpasswd
     
 # CMD /bin/bash
-CMD /opt/pycharm-community-2017.3.4/bin/pycharm.sh
+CMD /opt/pycharm-community-2018.1/bin/pycharm.sh
